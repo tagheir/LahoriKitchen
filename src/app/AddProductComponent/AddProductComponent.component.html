@@ -1,0 +1,71 @@
+<div class="container pt30 pb30" *ngIf="show">
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Product Form</h4>
+            <form [formGroup]="form">
+                <div class="form-group">
+                    <div class="input-group input-group-lg">
+                        <div class="input-group-addon"><i class="fa fa-category"></i></div>
+                        <select formControlName="catid" class="form-control" name="catid" required>
+              <option *ngFor="let ca of ct" value="{{ca.docid}}" selected>
+                {{ ca.catname }}
+              </option>
+            </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group input-group-lg">
+                        <input type="text" formControlName="name" class="form-control" required name="name" placeholder="Product Name" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group input-group-lg">
+                        <input type="text" formControlName="description" class="form-control" required name="name" placeholder="Description" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group input-group-lg">
+                        <input type="text" formControlName="imageUrl" class="form-control" name="image" placeholder="Image Url" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group input-group-lg">
+                        <input type="number" formControlName="price1" class="form-control" name="price" placeholder="Price1" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" name="pd1" formControlName="pricedesc1" placeholder="Price Desc1" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" name="pu1" formControlName="unit1" placeholder="Price Unit1" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group input-group-lg">
+                        <input type="number" class="form-control" name="price2" formControlName="price2" placeholder="Price2" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" name="pd2" formControlName="pricedesc2" placeholder="Price Desc2" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" name="pu2" formControlName="unit2" placeholder="Price Unit2" />
+                    </div>
+                </div>
+                <div class="form-group align-center">
+                    <button class="btn btn-primary" (click)="saveProduct()">
+                    Save Product
+                  </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

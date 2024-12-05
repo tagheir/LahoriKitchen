@@ -1,0 +1,169 @@
+<!-- First screen: paralax background -->
+<section id="introHome" class="clearfix">
+    <div id="parallaxHomeMain" class="stellar fullScreen" data-stellar-background-ratio="0.5">
+        <div class="introContent">
+            <!-- Logo (homepage) -->
+            <a class="brand-logo appear" href="index.html" data-delay="50" data-anim="fadeIn">
+                <!-- <img src="assets/images/logo.jpeg" alt="Red Bistro"> -->
+                <h4>
+                    My Lahori Kitchen
+                </h4>
+            </a>
+            <!-- Intro content -->
+            <h3 class="appear" data-delay="150" data-anim="fadeInUp">Meat our cookery</h3>
+            <h4 class="handwritten appear" data-delay="550" data-anim="fadeIn">We know what good means</h4>
+            <a href="#menuCard" class="btn btn-inverse appear" data-delay="950" data-anim="fadeInUp">View our menu</a>
+        </div>
+    </div>
+</section>
+<!-- end First screen -->
+<!-- Article mosaic -->
+<div id="articles-home">
+    <div class="container">
+        <div class="row isotopeWrapper clearfix isotope" data-columns="3">
+            <!-- First article -->
+            <article class="col-md-8 width2 isotopeItem">
+                <div class="row">
+                    <a href="#">
+                        <!-- Article image -->
+                        <figure class="col-sm-6 img-container appear" data-delay="150" data-anim="pulse">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/lahori-kitchen-de4e5.appspot.com/o/images%2F1632465001679_36d26343-2480-4dac-962c-3832cad688ef.JPG?alt=media&token=ca7c76b4-d67f-4441-b599-8ec1f9017c90" alt="">
+                        </figure>
+                        <div class="article-content col-sm-6 appear" data-delay="250" data-anim="bounceIn">
+                            <!-- Article text -->
+                            <h2 class="mt0">Korma and Karahi<br><small>We Serve Korma and Karahi in chicken and mutton</small></h2>
+
+                            <!-- <p>Consectetur adipiscing elit. Aenean eget nulla vitae leo tristique dictum ac mattis odio. Integer scelerisque pellentesque libero, id vehicula ex. Suspendisse tincidunt tristique nisi, id faucibus ante laoreet eget.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie id risus at placerat...</p> -->
+
+                            <div class="arrow arrow-left hidden-xs"></div>
+                            <div class="arrow arrow-up visible-xs"></div>
+                        </div>
+                    </a>
+                </div>
+            </article>
+            <!-- Second article -->
+            <article class="col-md-4 height2 isotopeItem">
+                <div class="row">
+                    <a href="#" class="active">
+                        <!-- Article image -->
+                        <figure class="col-md-12 col-sm-6 img-container appear" data-delay="600" data-anim="pulse">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/lahori-kitchen-de4e5.appspot.com/o/images%2F1632467403468_c2c99bc3-ea92-4a2b-a4a3-f6fcd118502a.JPG?alt=media&token=493635a0-fb02-4135-b682-d1e43924e227" alt="">
+                        </figure>
+                        <div class="article-content col-md-12 col-sm-6 appear" data-delay="700" data-anim="bounceIn">
+                            <!-- Article text -->
+                            <h2 class="mt0">Rice<br>
+                            </h2>
+                            <p>We serve Rice with different receipes i.e Chicken Biryani, Mutton Biryani, Chicken Kofta Biryani, Mutton Pulao</p>
+
+
+
+                            <div class="arrow arrow-up hidden-sm"></div>
+                            <div class="arrow arrow-left visible-sm"></div>
+                        </div>
+                    </a>
+                </div>
+            </article>
+            <!-- Third article -->
+            <article class="col-md-8 width2 isotopeItem">
+                <div class="row">
+                    <a href="#">
+                        <div class="article-content col-sm-6 appear" data-delay="750" data-anim="bounceIn">
+                            <!-- Article text -->
+                            <h2 class="mt0">Dessert<br></h2>
+
+                            <p>We serve deserts like KHEER,PHIRNI.</p>
+
+
+                            <div class="arrow arrow-right hidden-xs"></div>
+                            <div class="arrow arrow-down visible-xs"></div>
+                        </div>
+                        <!-- Article image -->
+                        <figure class="col-sm-6 img-container appear" data-delay="850" data-anim="pulse">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/lahori-kitchen-de4e5.appspot.com/o/images%2F1632464827896_7ae7906e-5b53-4417-bf2c-b9e18669647b.JPG?alt=media&token=23cf921e-8b31-4511-ab20-bff364e23714" alt="">
+                        </figure>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<!-- end Article mosaic -->
+<!-- Menu card -->
+<section id="menuCard" class="pt30 pb30">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center text-primary line-through">Our menu</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" *ngFor="let pdto of pr">
+                <h3 class="text-center text-primary handwritten">{{pdto.category.catname}}</h3>
+                <ul>
+                    <li *ngFor="let pt of pdto.products | slice:0:4; let i=index">
+                        <div class="menu-item"><span>{{pt.name}}</span> <span class="price">{{pt.price1 | currency:'USD':'symbol':'1.0-0'}}</span></div>
+                        {{pt.description}}
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <div class="row mt20">
+            <div class="col-md-12 text-center">
+                <a class="btn btn-lg btn-primary" href="/menu">View full menu</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end Menu card -->
+<!-- Testimonials -->
+<div id="testimonials" class="pt40">
+    <div class="container">
+        <div class="row">
+            <article class="col-md-4 mb40">
+                <div class="article-content">
+                    <i class="fa fa-quote-left"></i>
+                    <h4>Awesome food!</h4>
+                    <p>
+                        The Food is Amazing here! If you have not tried it out, I highly recommend you to try it out soon. They are professional, food is ready in a timely fashion. They have all different kinds of rice dishes, halal meat, Chicken kabob, beef kabob etc. You will
+                        not find any other authenic food like this. You will not be disappointed!
+                    </p>
+                </div>
+            </article>
+            <article class="col-md-4 mb40">
+                <div class="article-content">
+                    <i class="fa fa-quote-left"></i>
+                    <h4>Wonderfull place!</h4>
+                    <p>Authentic Lahori Taste, made from fresh products</p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</div>
+<!-- end Testimonials -->
+<!-- Short message -->
+<section id="parallaxHome" class="stellar" data-stellar-background-ratio="0.5">
+    <div class="parallaxContent">
+        <h2>
+            <i class="fa fa-star-o"></i><br> Take place with us<br>and share an unforgettable experience!
+        </h2>
+    </div>
+</section>
+<!-- end Short message -->
+<!-- About us -->
+<section id="aboutUs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center pt40 pb40">
+                <h2>We know what <span class="text-primary">good</span> means</h2>
+                <p class="lead"> {{appUtil.AboutUs}}</p>
+                <a class="btn btn-primary" href="/about">About us</a>
+            </div>
+        </div>
+    </div>
+</section>
+<app-makereservation></app-makereservation>
+<app-footer></app-footer>

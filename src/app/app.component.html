@@ -1,0 +1,81 @@
+<header>
+    <!-- First Header -->
+    <div id="preHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <!-- Phone -->
+                    <span class="info-header" dir="ltr"><i class="fa fa-phone"></i> <a href="tel:{{AppUtil.LinkPhoneNumber}}" target="_blank" > {{AppUtil.PhoneNumber}} </a> </span>
+                    <!-- Email -->
+                    <span class="info-header hidden-xs" dir="ltr"><i class="fa fa-envelope"></i> <a href="mailto:{{AppUtil.Email}}" target="_blank">{{AppUtil.Email}}</a></span>
+                </div>
+                <div class="col-xs-6">
+                    <div id="contactBloc" class="clearfix">
+                        <!-- Languages menu -->
+
+                        <!-- end Languages menu -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end First Header -->
+    <!-- Main Header -->
+    <div id="mainHeader">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li class="primary">
+                        <a class="firstLevel {{activehome}} dropdown-toggle hasSubMenu" href="/">Home</a>
+                        <!-- <span class="dropdown-btn visible-xs"></span>
+                        <ul class="subMenu">
+                            <li>
+                                <a href="index.html">Intro Parallax</a>
+                            </li>
+                            <li>
+                                <a href="index-video.html">Intro Video</a>
+                            </li>
+                            <li>
+                                <a href="index-slider.html">Intro Slideshow</a>
+                            </li>
+                        </ul> -->
+                    </li>
+                    <li class="primary">
+                        <a class="firstLevel {{activemenu}}" href="/menu">Menu</a>
+                    </li>
+                    <li class="primary">
+                        <a class="firstLevel {{activeabout}}" href="/about">About</a>
+                    </li>
+                    <li class="primary">
+                        <a class="firstLevel {{activegallery}}" href="/gallery" title="Gallery">Gallery</a>
+                    </li>
+                    <li class="primary">
+                        <a class="firstLevel {{activecontactus}} " href="/reservation" title="Reservation">Reservation</a>
+                    </li>
+
+                </ul>
+                <!-- end Main navigation -->
+            </div>
+            <div class="navbar navbar-default">
+                <div class="navbar-header pull-right">
+                    <!-- Mobile navigation -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                </div>
+                <!-- Logo (internal pages and mobile view) -->
+                <a class="navbar-brand" href="index.html">
+                    <!-- <img src="assets/images/logo.jpeg" alt="Red Bistro"> -->
+                    <h5> My Lahori Kitchen </h5>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- end Main Header -->
+</header>
+<router-outlet></router-outlet>
+<!-- Footer -->

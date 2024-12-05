@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table>
+                <tr *ngFor="let pic of pc">
+                    <td>
+                        <img src="{{pic.downloadURL}}" width="100" height="100">
+                    </td>
+                    <td>
+                        <span>
+                        {{pic.downloadURL}}
+                       </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

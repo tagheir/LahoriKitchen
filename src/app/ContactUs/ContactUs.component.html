@@ -1,0 +1,163 @@
+<!-- Page content wrapper -->
+<section id="page">
+    <div class="container pt30 pb30">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Heading -->
+                <h1 class="text-center line-through">Contact Us</h1>
+                <p class="subtitle text-center handwritten mb10"><span class="text-primary">Book</span> Your Food With Us!</p>
+            </div>
+        </div>
+        <div class="row mt20">
+            <div class="col-md-6">
+                <div class="row mb20">
+                    <div class="col-md-12">
+                        <!-- Carousel -->
+                        <div class="owl-carousel owlWrapper owl-theme" data-items="1" data-autoplay="true" data-dots="false" data-nav="false" data-rtl="false" data-transition="backSlide">
+                            <div class="item"><img alt="" src="assets/images/logo.jpeg" class="img-responsive" style="max-height:500px;"></div>
+                            <div class="item"><img alt="" src="https://firebasestorage.googleapis.com/v0/b/lahori-kitchen-de4e5.appspot.com/o/images%2F1632464782655_5bb6f897-cbc0-4f02-9e2e-200c064b08f4.JPG?alt=media&token=c6b9cc3c-1f43-419e-a577-5d4b6a50d5f3" class="img-responsive"
+                                    style="max-height:500px;"></div>
+                            <div class="item"><img alt="" src="https://firebasestorage.googleapis.com/v0/b/lahori-kitchen-de4e5.appspot.com/o/images%2F1632467208989_b4b5e1e0-a06e-49d3-95cb-a745feed7efb.JPG?alt=media&token=1a0c2d2b-6873-4827-b144-a165ab9f714b" class="img-responsive"
+                                    style="max-height:500px;"></div>
+                            <div class="item"><img alt="" src="https://firebasestorage.googleapis.com/v0/b/lahori-kitchen-de4e5.appspot.com/o/images%2F1632466940444_33916e9e-93f3-401e-ae90-a876709088a7.JPG?alt=media&token=76bf1342-09c4-44bb-ad55-bcbd4bb6e657" class="img-responsive"
+                                    style="max-height:500px;"></div>
+                        </div>
+                        <!-- end Carousel -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Company details -->
+                        <div class="hotBox bg-main mb15" itemscope itemtype="http://schema.org/Corporation">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h2 itemprop="name" class="mt5">{{Apputils.AppName}}</h2>
+                                    <address>
+                                      <p>
+                                          <i class="fa fa-map-marker"></i> <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">{{Apputils.Address}}</span><br>
+                                          <i class="fa fa-phone"></i> <span itemprop="telephone" dir="ltr">{{Apputils.PhoneNumber}}</span><br>
+
+                                          <i class="fa fa-envelope"></i> <a itemprop="email" dir="ltr" href="mailto:{{Apputils.Email}}">{{Apputils.Email}}</a>
+                                      </p>
+                                  </address>
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- <h3 class="text-center line-through">Opening Hours</h3> -->
+                                    <!-- <div class="row">
+                                        <div class="col-sm-6">
+                                            <p class="text-center">
+                                                <b>Mon - Fri</b><br> 11:30am - 15pm<br> 18:30am - 21pm
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="text-center">
+                                                <b>​​Sat - Sun:</b><br> 11:45am - 16pm<br> 18:45am - 22pm
+                                            </p>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end Company details -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Reservation form -->
+                <form method="post" action="#" class="ajax-form" [formGroup]="form">
+                    <!-- <h3 class="mt0">Reservation date</h3>
+                    <div class="form-group form-inline">
+                        <div class="input-group input-group-lg mb10">
+                            <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                            <input type="text" class="form-control datepicker" name="date" value="" placeholder="Date *">
+                        </div>
+                        <div class="input-group input-group-lg mb10">
+                            <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>
+                            <select class="form-control" name="hour">
+                              <option value="12:00">12:00</option>
+                              <option value="12:15">12:15</option>
+                              <option value="12:30">12:30</option>
+                              <option value="12:45">12:45</option>
+                              <option value="13:00">13:00</option>
+                              <option value="13:15">13:15</option>
+                              <option value="13:30">13:30</option>
+                              <option value="13:45">13:45</option>
+                              <option value="14:00">14:00</option>
+                              <option value="19:00">19:00</option>
+                              <option value="19:15">19:15</option>
+                              <option value="19:30">19:30</option>
+                              <option value="19:45">19:45</option>
+                              <option value="20:00">20:00</option>
+                              <option value="20:15">20:15</option>
+                              <option value="20:30">20:30</option>
+                              <option value="20:45">20:45</option>
+                              <option value="21:00">21:00</option>
+                          </select>
+                        </div>
+                    </div> -->
+                    <h3>booking details</h3>
+                    <div class="form-group">
+                        <div class="input-group input-group-lg">
+                            <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                            <select class="form-control" formControlName="guest">
+                              <option value="">Guests *</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                              <option value="10+">10+</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group input-group-lg">
+                            <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                            <input type="text" class="form-control" name="name" formControlName="name" value="" placeholder="Lastname Firstname *">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group input-group-lg">
+                            <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+                            <input type="text" class="form-control" formControlName="email" name="email" value="" placeholder="E-mail *">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group input-group-lg">
+                            <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                            <input type="text" class="form-control" formControlName="phone" name="phone" value="" placeholder="Phone *">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group input-group-lg">
+                            <div class="input-group-addon"><i class="fa fa-quote-left"></i></div>
+                            <textarea class="form-control" name="msg" formControlName="message" placeholder="Message *" rows="7"></textarea>
+                        </div>
+                    </div>
+                    <p class="text-right"><i> * Required field</i></p>
+                    <div class="row mt20 mb20">
+                        <div class="col-sm-12 text-center">
+
+                            <div class="alert alert-success" *ngIf="showmessage">
+                                {{message}}
+                            </div>
+                            <div class="alert alert-danger" *ngIf="showerror">
+                                {{error}}
+                            </div>
+
+                            <button (click)="submit()" type="button" class="btn btn-primary btn-lg "><i class="fa fa-send"></i> Send</button>
+                        </div>
+                    </div>
+                </form>
+                <!-- end Reservation form -->
+            </div>
+        </div>
+    </div>
+</section>
+<app-makereservation></app-makereservation>
+<app-footer></app-footer>

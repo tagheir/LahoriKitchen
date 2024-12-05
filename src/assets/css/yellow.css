@@ -1,0 +1,398 @@
+/* 
+    Author:         Pandao
+    Description:    Template colors
+
+    Table of Content
+    ==================================================
+
+    #GENERAL (body / typography)
+    #BOOTSTRAP (customization)
+    #HEADERS (+ main menu)
+    #MISCELLANEOUS
+    #ARTICLES HOMEPAGE
+    #TESTIMONIALS
+    #MENU CARD
+    #INTRO HOMEPAGE
+    #PARALLAX HOMEPAGE
+    #MAKE A RESERVATION
+    #ISOTOPE / MASONRY
+    #FOOTER
+    #LOADER
+
+    Color
+    ===============
+    Hexa: #F6B202
+    RGB: 246, 178, 2
+*/
+
+/****************** GENERAL ******************/
+body {
+    color: #333;
+    background: #fff;
+}
+body#home {
+    background: #e8e8e8;
+}
+a {
+    color: #F6B202;
+}
+a:hover {
+    color: #F6B202;
+}
+a p {
+    color: #333;
+}
+hr {
+    background: -moz-linear-gradient(left, rgba(0,0,0,0) 5%, rgba(204,204,204,1) 50%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 5%, rgba(204,204,204,1) 50%, rgba(0,0,0,0) 100%);
+    background: -ms-linear-gradient(left, rgba(0,0,0,0) 5%, rgba(204,204,204,1) 50%, rgba(0,0,0,0) 100%);
+    background: -o-linear-gradient(left, rgba(0,0,0,0) 5%, rgba(204,204,204,1) 50%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(left, rgba(0,0,0,0) 5%, rgba(204,204,204,1) 50%, rgba(0,0,0,0) 100%);
+}
+h1.line-through:before, h2.line-through:before, h3.line-through:before, h4.line-through:before, h5.line-through:before,
+h1.line-through:after, h2.line-through:after, h3.line-through:after, h4.line-through:after, h5.line-through:after {
+    background: #E5DEDA;
+    background: #ccc;
+}
+h1 {
+    color: #F6B202;
+}
+strong {
+    color: #F6B202;
+}
+
+/***************** BOOTSTRAP *****************/
+.btn-primary,
+.btn-inverse:hover {
+    background-color: #F6B202;
+    border-color: #F6B202;
+    color: #fff;
+}
+.btn-default,
+.btn-inverse,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #131313;
+    border-color: #131313;
+    color: #fff;
+}
+.text-primary {
+    color: #F6B202;
+}
+.label.label-default {
+    background: #aaa;
+}
+blockquote {
+    color: #555;
+}
+.input-group {
+    background: #fff;
+    border: 1px solid #666;
+}
+.form-control,
+.input-group-addon {
+    background: none;
+    border: none;
+}
+
+/****************** HEADERS ******************/
+#preHeader {
+    background: #000;
+    color: #fff;
+}
+#preHeader a {
+    color: #fff;
+}
+#mainHeader {
+    background-image: linear-gradient(to bottom, rgba(30, 30, 30, 0.9), rgba(50, 50, 50, 0.7)), url("../images/bg-header.jpg");
+    background-image: -moz-linear-gradient(top, rgba(30, 30, 30, 0.9), rgba(50, 50, 50, 0.7)), url("../images/bg-header.jpg");
+    background-image: -o-linear-gradient(top, rgba(30, 30, 30, 0.9), rgba(50, 50, 50, 0.7)), url("../images/bg-header.jpg");
+    background-image: -ms-linear-gradient(top, rgba(30, 30, 30, 0.9), rgba(50, 50, 50, 0.7)), url("../images/bg-header.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(30, 30, 30, 0.9)), to(rgba(50, 50, 50, 0.7))), url("../images/bg-header.jpg");
+    background-image: -webkit-linear-gradient(top, rgba(30, 30, 30, 0.9), rgba(50, 50, 50, 0.7)), url("../images/bg-header.jpg");
+}
+#home #mainHeader {
+    background: rgba(0, 0, 0, 0.3);
+}
+.navbar {
+    background: none;
+}
+ul.navbar-nav > li.primary > a.firstLevel {
+    color: #fff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background: #fff;
+}
+.navbar-toggle {
+    border-color: #fff;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #000;
+}
+ul.navbar-nav > li.primary > a.firstLevel.active,
+ul.navbar-nav > li.primary > a.firstLevel:hover,
+ul.navbar-nav > li.primary > a.firstLevel:focus {
+    color: #F6B202;
+    background: none;
+}
+@media(max-width:767px) {
+    ul.navbar-nav > li.primary > a.firstLevel.active,
+    ul.navbar-nav > li.primary > a.firstLevel:hover,
+    ul.navbar-nav > li.primary > a.firstLevel:focus {
+        background: #fff;
+    }
+    #mainMenu .navbar-nav li {
+        border-bottom: 1px solid #eee;
+    }
+    #mainHeader, #home #mainHeader, #mainMenu {
+        background: #F6B202;
+    }
+}
+#mainMenu .navbar-nav ul li a {
+    border-bottom: 1px solid #444;
+}
+.navbar-nav ul li a {
+    color: #fff;
+}
+.navbar-nav ul li a:hover, .navbar-nav ul li.hover > a {
+    background: #F6B202;
+    color: #fff;
+}
+@media(min-width:768px) {
+    .navbar-nav ul {
+        background: #121212;
+    }
+}
+#lang-btn {
+    background: transparent;
+    border: 0;
+}
+#lang-btn:hover,
+#lang-btn:focus {
+    color: #ccc;
+}
+#lang-menu {
+    background: #000;
+    color: #fff;
+}
+#lang-menu a {
+    color: #fff;
+}
+#lang-menu a:hover {
+    color: #000;
+    background: #fff;
+}
+.info-header i {
+    background: #F6B202;
+    color: #fff;
+}
+
+/*************** MISCELLANEOUS ***************/
+.owl-theme .owl-controls .owl-page span {
+    background: #F6B202;
+}
+.bg-main {
+    background: #F6B202;
+    color: #fff;
+}
+.bg-main a {
+    color: #fff;
+}
+.bg-default {
+    background: #ccc;
+    color: #333;
+}   
+.bg-default hr {
+    background: -moz-linear-gradient(left, rgba(0,0,0,0) 5%, rgba(50,50,50,0.8) 50%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 5%, rgba(50,50,50,0.8) 50%, rgba(0,0,0,0) 100%);
+    background: -ms-linear-gradient(left, rgba(0,0,0,0) 5%, rgba(50,50,50,0.8) 50%, rgba(0,0,0,0) 100%);
+    background: -o-linear-gradient(left, rgba(0,0,0,0) 5%, rgba(50,50,50,0.8) 50%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(left, rgba(0,0,0,0) 5%, rgba(50,50,50,0.8) 50%, rgba(0,0,0,0) 100%);
+}   
+.bg-inverse {
+    background: #333;
+    color: #fff;
+}
+
+/************* ARTICLES HOMEPAGE *************/
+#articles-home .article-content {
+    background: #fff;
+    color: #333;
+}
+#articles-home a.active .article-content,
+#articles-home a:hover .article-content {
+    background: #F6B202;
+    color: #fff;
+}
+#articles-home .article-content * {
+    color: #333;
+}
+#articles-home a.active .article-content *,
+#articles-home a:hover .article-content * {
+    color: #fff;
+}
+#articles-home article figure {
+    background: #ddd;
+}
+.arrow.arrow-left {
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 30px solid #fff;
+}
+.arrow.arrow-right {
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid #fff;
+}
+.arrow.arrow-up {
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid #fff;
+}
+.arrow.arrow-down {
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid #fff;
+}
+#articles-home a.active .arrow.arrow-left,
+#articles-home a:hover .arrow.arrow-left {
+    border-right-color: #F6B202;
+}
+#articles-home a.active .arrow.arrow-right,
+#articles-home a:hover .arrow.arrow-right {
+    border-left-color: #F6B202;
+}
+#articles-home a.active .arrow.arrow-up,
+#articles-home a:hover .arrow.arrow-up {
+    border-bottom-color: #F6B202;
+}
+#articles-home a.active .arrow.arrow-down,
+#articles-home a:hover .arrow.arrow-down {
+    border-top-color: #F6B202;
+}
+
+/**************** TESTIMONIALS ***************/
+#testimonials .article-content {
+    background: #fff;
+    border-bottom: 5px solid #F6B202;
+}
+#testimonials .article-content i.fa {
+    background: #fff;
+    color: #F6B202;
+}
+#testimonials .article-content h4 {
+    color: #F6B202;
+}
+
+/***************** MENU CARD *****************/
+#menuCard h3 {
+    color: #F6B202;
+}
+#menuCard ul > li > .menu-item > span {
+    background: #fff;
+}
+#menuCard ul > li > .menu-item {
+    color: #000;
+}
+#menuCard ul > li > .menu-item:before {
+    background: #ccc;
+}
+#menuCard ul > li span.price {
+    color: #F6B202;
+}
+#home #menuCard {
+    background: url("../images/blackboard.jpg") center;
+}
+#home #menuCard ul > li > .menu-item > span {
+    background: transparent;
+}
+#home #menuCard ul > li > .menu-item:before {
+    display: none;
+}
+#home #menuCard ul > li {
+    color: #bbb;
+}
+#home #menuCard h3, #home #menuCard ul > li > .menu-item, #home #menuCard ul > li span.price {
+    color: #fff;
+}
+
+/************** HOMEPAGE INTRO ***************/
+#introHome h3 {
+    color: #fff;
+}
+#introHome h4 {
+    color: #fff;
+}
+#parallaxHomeMain:before, #introHome .rsContent:before  {
+    background: rgba(20, 20, 20, 0.4);
+}
+
+/************* PARALLAX HOMEPAGE **************/
+#parallaxHome h2 {
+    color: #fff;
+}
+#parallaxHome .parallaxContent {
+    background: rgba(20, 20, 20, 0.5);
+}
+
+/************ MAKE A RESERVATION **************/
+#reservation-wrapper h3, #reservation-wrapper p {
+    color: #fff;
+}
+
+/************* ISOTOPE / MASONRY *************/
+.isotopeWrapper.loaded {
+    background: none;
+}
+.zoom-image:before {
+    color: #fff;
+    border: 4px solid #fff;
+}
+.zoom-image:hover {
+    background: rgba(246, 178, 2, 0.2);
+}
+
+/******************* FOOTER ******************/
+#mainFooter {
+    background: #1c1c1c;
+}
+#footerRights {
+    background: #000;
+}
+#mainFooter, #footerRights, #mainFooter a, #footerRights a {
+    color: #fff;
+}
+#mainFooter p.lead,
+#mainFooter h4 {
+    color: #F6B202;
+}
+#toTop {
+    background: #fff;
+    border: 1px solid #ddd;
+}
+#toTop:hover {
+    background: #F6B202;
+    color: #fff;
+}
+.iconCircle {
+    border: 1px solid #fff;
+}
+a:hover .iconCircle {
+    background: #fff;
+    color: #000;
+}
+
+/******************* LOADER ******************/
+#loader-wrapper {
+    background: #121212;
+}
+#loader {
+    border-top-color: #fff;
+}
+#loader:before {
+    border-top-color: #F6B202;
+}
+#loader:after {
+    border-top-color: #888;
+}

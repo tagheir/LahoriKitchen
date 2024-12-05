@@ -1,0 +1,39 @@
+<!-- Page content wrapper -->
+<section id="page">
+    <div class="container-fluid pt30 pb30">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Heading -->
+                <h1 class="text-center line-through">Gallery</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="text-center mt20">
+                    <div class="btn-group filter-isotope">
+                        <!-- Filters -->
+                        <!-- <a href="#" class="btn btn-default" data-filter="*">All</a>
+                        <a href="#" class="btn btn-default" data-filter=".tag-restaurant">Restaurant</a>
+                        <a href="#" class="btn btn-default" data-filter=".tag-food">Food</a>
+                        <a href="#" class="btn btn-default" data-filter=".tag-vegetarian">Vegetarian</a> -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row mt30 mb30">
+            <!-- Gallery -->
+            <div class="isotopeWrapper clearfix isotope appear" data-delay="350" data-anim="fadeIn" data-columns="3">
+
+
+                <a *ngFor="let p of pd" href="{{p.downloadURL}}" class="more-link image-link">
+                    <figure class="col-xs-4 isotopeItem img-container tag-restaurant">
+                        <img src="{{p.downloadURL}}" class="loaded" alt="">
+                        <span class="zoom-image"></span>
+                    </figure>
+                </a>
+
+            </div>
+            <!-- end Gallery -->
+        </div>
+    </div>
+</section>

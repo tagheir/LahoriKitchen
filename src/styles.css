@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+.align-center {
+    text-align: center !important;
+}
+
+.input-group-error {
+    background: #fff;
+    border: 1px solid #ff0202;
+}

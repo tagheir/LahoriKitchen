@@ -1,0 +1,107 @@
+<!-- Page content wrapper -->
+
+<img src="/assets/images/spin.svg" *ngIf="show" style="position: absolute;
+left: 50%;
+z-index: 100000;
+top: 50%;
+right: 50%;">
+
+<section id="page">
+    <div class="container pt30 pb30">
+        <div id="menuCard">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Heading -->
+                    <h1 class="text-center line-through">Our Menu</h1>
+                </div>
+            </div>
+            <button (click)="htmltoPDF()" class="btn btn-primary"> Download PDF</button>
+
+            <div #pdfTable style="padding-top: 20px;padding-left: 20px;" [class.hide]="!show">
+                <img src="/assets/images/logo.jpeg" class="text-center" height="200" width="200">
+                <div class="row mb15">
+                    <div class="col-md-4" *ngFor="let pdto of pr">
+
+                        <h2 class="text-primary text-center handwritten fs-20">{{pdto.category.catname}}
+                            <br>
+                            <small class="xx-small" *ngIf="pdto.category.showunit">
+                          Served in {{pdto.products[0].unit1}} & {{pdto.products[0].unit2}}
+                      </small>
+                        </h2>
+                        <ul class="print">
+                            <li *ngFor="let p of pdto.products">
+                                <div class="menu-item"><span>  {{p.name}} </span> <span class="price">{{p.price1 | currency:'USD':'symbol':'1.0-0'}} / {{p.price2 != undefined && p.price2 != null ?(p.price2| currency:'USD':'symbol':'1.0-0' ) : p.unit1}}</span></div>
+                                {{p.description}}
+                                <br>
+
+                                <span class="text-primary">
+                              {{p.minorder != undefined && p.minorder > 1 ? 'Min '+p.minorder+' '+p.unit1+ ' order ' : ''}}
+                          </span>
+                                <!-- <br> {{p.price2}} -->
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Menu card -->
+
+            <!-- <div class="row " #pdfTable>
+                <img src="http://localhost:4200/assets/images/logo.jpeg" width="100" height="100">
+                <div class="col-md-4" *ngFor="let product of pr">
+                    <h4> {{product.category.catname}} </h4>
+                    <ul>
+                        <li *ngFor="let products of product.products">
+                            {{products.name}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <table *ngFor="let col of cl">
+
+                <tr>
+                    {{col.PL[0].category.catname}}
+                </tr>
+                <tr>
+                    {{col.PL[0].category.catname}}
+                </tr>
+            </table> -->
+            <div>
+                <div class="row mb15" *ngFor="let col of  cl">
+                    <div class="col-md-{{pdto.products.length < 7 ? '4': pdto.products.length > 12 ? '12' : '8' }}" *ngFor="let pdto of col.PL">
+                        <img src="{{pdto.category.imageUrl}}" alt="Salads" class="img-responsive">
+                        <h2 class="text-primary text-center handwritten">{{pdto.category.catname}}
+                            <br>
+                            <small class="xx-small" *ngIf="pdto.category.showunit">
+                            Served in {{pdto.products[0].unit1}} & {{pdto.products[0].unit2}}
+                        </small>
+                        </h2>
+                        <ul class="{{pdto.products.length < 7 ? '': pdto.products.length > 8 ? 'menu' : 'menu2' }}">
+                            <li *ngFor="let p of pdto.products">
+                                <div class="menu-item"><span>  {{p.name}} </span> <span class="price">{{p.price1 | currency:'USD':'symbol':'1.0-0'}} / {{p.price2 != undefined && p.price2 != null ?(p.price2| currency:'USD':'symbol':'1.0-0') : p.unit1}}</span></div>
+                                {{p.description}}
+                                <br>
+
+                                <span class="text-primary">
+                                {{p.minorder != undefined && p.minorder > 1 ? 'Min '+p.minorder+' '+p.unit1+ ' order ' : ''}}
+                            </span>
+                                <!-- <br> {{p.price2}} -->
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<app-makereservation></app-makereservation>
+<app-footer></app-footer>
